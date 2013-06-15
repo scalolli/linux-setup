@@ -1,5 +1,8 @@
 task :default => [:core]
 
+username = "scalolli"
+email = "basavarajkalloli@gmail.com" 
+
 task :chrome_dependency do 
   sh "cp /media/basu/Softwares/UbuntuInstallers/libudev0_175-0ubuntu13_amd64.deb ~/devtools -f"
   sh "sudo dpkg -i ~/devtools/libudev0_175-0ubuntu13_amd64.deb"
@@ -19,4 +22,6 @@ end
 task :core do 
  sh "sudo apt-get install vim -y"
  sh "sudo apt-get install git -y"
+ sh "git config --global user.email #{username}"
+ sh "git config --global user.name #{email}"
 end
