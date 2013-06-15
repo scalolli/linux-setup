@@ -34,5 +34,10 @@ end
 
 task :skype do 
  sh "wget http://www.skype.com/go/getskype-linux-beta-ubuntu-64 -O skype"
- sh "dpkg -i skype"
+ sh "sudo dpkg -i skype"
+end
+
+task :music do 
+ sh "sudo apt-get install audacious -y"
+ sh "sudo apt-get install vlc -y"
 end
