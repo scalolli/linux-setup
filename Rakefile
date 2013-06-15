@@ -20,8 +20,14 @@ task :java do
 end
 
 task :core do 
- sh "sudo apt-get install vim -y"
- sh "sudo apt-get install git -y"
+ sh "sudo apt-get install vim git wget tmux zsh -y"
  sh "git config --global user.email #{username}"
  sh "git config --global user.name #{email}"
+end
+
+task :oh_my do 
+ sh "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh" 
+ sh "cp ~/.zshrc ~/.zshrc.orig"
+ sh "cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc"
+ sh "chsh -s $(which zsh)" 
 end
