@@ -1,8 +1,6 @@
 #!/bin/bash
 
-apt-get install curl wget vim git zsh -y
-
-sudo rm -rf ~/oh-my-zsh
+apt-get install curl wget vim git -y
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
